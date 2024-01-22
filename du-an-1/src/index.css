@@ -1,0 +1,53 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/* #root {
+  background: #1e1e2e;
+  height: 100vh;
+  width: 100vw;
+}
+.container {
+  background: #1e1e2e;
+} */
+
+input,
+button,
+label {
+  color: white;
+}
+h1 {
+  width: 210px;
+  height: 48px;
+  top: 396px;
+  left: 855px;
+  color: #ffffff;
+}
+.text-center {
+  text-align: center;
+}
+.login1 {
+  width: Hug (471px);
+  height: Hug (80px);
+  top: 472px;
+  left: 724px;
+  gap: 8px;
+}
+
+/*thẻ h1 trong trang quên mk */
+.bb {
+  width: 383px;
+  height: 40px;
+  top: 408px;
+  left: 769px;
+}
