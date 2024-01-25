@@ -36,13 +36,13 @@ h1 {
 .text-center {
   text-align: center;
 }
-.login1 {
-  width: Hug (471px);
-  height: Hug (80px);
+/* .login1 {
+  width: 471px;
+  height: 80px;
   top: 472px;
   left: 724px;
   gap: 8px;
-}
+} */
 
 /*thẻ h1 trong trang quên mk */
 .bb {

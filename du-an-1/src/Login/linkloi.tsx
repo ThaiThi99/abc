@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import HeaderLogin from "../BackGround/headerLogin";
 
-const QuenMatKhau: React.FC = () => {
+const LinkLoi: React.FC = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
@@ -48,17 +48,18 @@ const QuenMatKhau: React.FC = () => {
               lineHeight: "48px",
               letterSpacing: "-0.002em",
               textAlign: "center",
-              color: "#FFFFFF",
+              color: "#FF4747",
+              marginTop: "52px",
             }}
           >
-            Khôi phục mật khẩu
+            Không thể kết nối !!
           </div>
           <div
             style={{
-              width: "567px",
+              width: "625px",
               height: "24px",
               top: "464px",
-              left: "662px",
+              left: "643px",
               fontFamily: "Montserrat",
               fontSize: "16px",
               fontWeight: "400",
@@ -66,72 +67,39 @@ const QuenMatKhau: React.FC = () => {
               letterSpacing: "-0.002em",
               textAlign: "center",
               color: "#FFFFFF",
+              marginTop: "16px",
             }}
           >
-            Vui lòng nhập địa chỉ email đã đăng ký để yêu cầu khôi phục mật khẩu
+            Dường như đã có chút trục trặc hoặc link này đã hết hạn. Vui lòng
+            thử lại <br /> hoặc yêu cầu gửi lại link để đặt lại mật khẩu của
+            bạn.
           </div>
-
-          <div
-            style={{
-              width: "598px",
-              height: "fit-content", // Sử dụng 'fit-content' thay cho 'hug'
-              top: "520px",
-              left: "661px",
-              gap: "8px",
-            }}
-          >
-            <div
-              style={{
-                width: "47px",
-                height: "24px",
-                fontFamily: "Montserrat",
-                fontSize: "16px",
-                fontWeight: "600",
-                lineHeight: "24px",
-                letterSpacing: "-0.002em",
-                textAlign: "left",
-                color: "#FFFFFF",
-              }}
-            >
-              email
-            </div>
-            <input
-              className="bg-black"
-              type="text"
-              id="username"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-              style={{
-                width: "598px",
-                height: "48px",
-                padding: "11px 24px 13px 16px",
-                borderRadius: "8px",
-                border: "1px solid #727288",
-                background:
-                  "linear-gradient(0deg, #2B2B3F, #2B2B3F), linear-gradient(0deg, #727288, #727288)",
-                color: "#FFFFFF",
-              }}
-            />
-          </div>
-
           <button
-            className="mt-5"
             style={{
-              width: "208px",
+              width: "220px",
               height: "56px",
-              top: "648px",
-              left: "856px",
+              top: "568px",
+              left: "850px",
               padding: "16px 24px",
               borderRadius: "8px",
+              border: "1px solid #FF7506",
               gap: "8px",
-              background: "#FF7506",
-              animationDuration: "0ms",
+              color: "#FF7506",
+              backgroundColor: "transparent",
+              fontFamily: "Montserrat",
+              fontSize: "16px",
+              fontWeight: "400",
+              lineHeight: "24px",
+              letterSpacing: "-0.002em",
+              textAlign: "center",
+              marginTop: "56px",
             }}
           >
-            xác nhận
+            Yêu cầu gửi lại link
           </button>
+
           <a
-            href="/"
+            href="/login"
             style={{
               position: "absolute", // Thêm dòng này để định vị theo tọa độ top và left
               width: "161px",
@@ -147,6 +115,7 @@ const QuenMatKhau: React.FC = () => {
               letterSpacing: "0em",
               textAlign: "center",
               color: "#FF7506",
+              marginBottom: "52px",
             }}
           >
             Quay lại đăng nhập
@@ -157,4 +126,4 @@ const QuenMatKhau: React.FC = () => {
   );
 };
 
-export default QuenMatKhau;
+export default LinkLoi;

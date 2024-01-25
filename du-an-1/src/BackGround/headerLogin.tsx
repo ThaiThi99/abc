@@ -5,7 +5,7 @@ function HeaderLogin() {
 
   return (
     <>
-      <header className="p-3 mb-3 border-bottom">
+      <header className="p-3 mb-3">
         <div className="container">
           <div className="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
             <a
@@ -23,7 +23,8 @@ function HeaderLogin() {
               </svg>
             </a>
             <ul className="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0"></ul>
-            <div>
+
+            {/* <div>
               <select
                 id="language"
                 value={language}
@@ -33,7 +34,26 @@ function HeaderLogin() {
                 <option value="en">English</option>
                 <option value="fr">French</option>
               </select>
+            </div> */}
+            <div
+              style={{
+                border: "1px solid white",
+                color: "white",
+                backgroundColor: "black",
+              }}
+            >
+              <select
+                id="language"
+                value={language}
+                onChange={(e) => setLanguage(e.target.value)}
+                style={{ color: "white", backgroundColor: "black" }}
+              >
+                <option value="vi">Tiếng Việt</option>
+                <option value="en">English</option>
+                <option value="fr">French</option>
+              </select>
             </div>
+
             {/* <div className="dropdown text-end">
               <a
                 href="#"

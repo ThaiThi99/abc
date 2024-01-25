@@ -3,14 +3,22 @@ import HeaderLogin from "../BackGround/headerLogin";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const LoginForm: React.FC = () => {
+const DatlaiMK: React.FC = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
-  // const [language, setLanguage] = useState("en");
+  const [passwordMatchError, setPasswordMatchError] = useState(false);
 
-  const handleLogin = () => {
-    // Xử lý logic đăng nhập tại đây
+  const handleSave = () => {
+    if (password === confirmPassword) {
+      // Passwords match, proceed with saving logic
+      setPasswordMatchError(false);
+      // Continue with your save logic here
+    } else {
+      // Passwords don't match, display error
+      setPasswordMatchError(true);
+    }
   };
 
   const toggleShowPassword = () => {
@@ -43,7 +51,7 @@ const LoginForm: React.FC = () => {
 
             <div
               style={{
-                width: "210px",
+                width: "313px",
                 height: "48px",
                 top: "396px",
                 left: "855px",
@@ -54,59 +62,14 @@ const LoginForm: React.FC = () => {
                 letterSpacing: "-0.002em",
                 textAlign: "center",
                 color: "#FFFFFF",
+                marginTop: "48px",
+                marginBottom: "40px",
               }}
             >
-              Đăng nhập
-            </div>
-            <div
-              style={{
-                width: "471px",
-                height: "80px",
-                top: "472px",
-                left: "724px",
-                gap: "8px",
-              }}
-            >
-              <div
-                style={{
-                  width: "124px",
-                  height: "24px",
-                  opacity: "0.7",
-                  fontFamily: "Montserrat",
-                  fontSize: "16px",
-                  fontWeight: "600",
-                  lineHeight: "24px",
-                  letterSpacing: "-0.002em",
-                  textAlign: "left",
-                  color: "#FFFFFF",
-                }}
-              >
-                Tên đăng nhập
-              </div>
-              <input
-                className="bg-black"
-                type="text"
-                id="username"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
-                style={{
-                  width: "471px",
-                  height: "48px",
-                  padding: "11px 24px 13px 16px",
-                  borderRadius: "8px",
-                  background: "#2B2B3F",
-                  fontFamily: "Arial",
-                  fontSize: "16px",
-                  fontWeight: "400",
-                  lineHeight: "24px",
-                  letterSpacing: "normal",
-                  textAlign: "left",
-                  color: "#FFFFFF",
-                }}
-              />
+              Đặt lại mật khẩu
             </div>
 
-            <div className="login1">
+            <div>
               <div
                 style={{
                   width: "124px",
@@ -121,7 +84,7 @@ const LoginForm: React.FC = () => {
                   color: "#FFFFFF",
                 }}
               >
-                Password
+                Mật khẩu mới:
               </div>
               <div
                 className="password-input-wrapper"
@@ -133,6 +96,64 @@ const LoginForm: React.FC = () => {
                   id="password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
+                  style={{
+                    width: "471px",
+                    height: "48px",
+                    padding: "11px 24px 13px 16px",
+                    borderRadius: "8px",
+                    background: "#2B2B3F",
+                    fontFamily: "Arial",
+                    fontSize: "16px",
+                    fontWeight: "400",
+                    lineHeight: "24px",
+                    letterSpacing: "normal",
+                    textAlign: "left",
+                    color: "#F5F5FF",
+                  }}
+                />
+
+                <FontAwesomeIcon
+                  style={{
+                    width: "40px",
+                    position: "absolute",
+                    right: 10,
+                    top: 15,
+                    color: "red",
+                  }}
+                  icon={showPassword ? faEyeSlash : faEye}
+                  onClick={toggleShowPassword}
+                />
+              </div>
+            </div>
+
+            <div>
+              <div
+                style={{
+                  width: "192px",
+                  height: "24px",
+                  opacity: "0.7",
+                  fontFamily: "Montserrat",
+                  fontSize: "16px",
+                  fontWeight: "600",
+                  lineHeight: "24px",
+                  letterSpacing: "-0.002em",
+                  textAlign: "left",
+                  color: "#F5F5FF",
+                  marginTop: "24px",
+                }}
+              >
+                Nhập lại mật khẩu mới:
+              </div>
+              <div
+                className="password-input-wrapper"
+                style={{ position: "relative" }}
+              >
+                <input
+                  className="bg-black"
+                  type={showPassword ? "text" : "password"}
+                  id="password"
+                  value={confirmPassword}
+                  onChange={(e) => setConfirmPassword(e.target.value)}
                   style={{
                     width: "471px",
                     height: "48px",
@@ -160,62 +181,24 @@ const LoginForm: React.FC = () => {
                   icon={showPassword ? faEyeSlash : faEye}
                   onClick={toggleShowPassword}
                 />
-                {/* </div> */}
               </div>
             </div>
-
-            <div
-              // className="form-check text-start my-3 "
-              style={{
-                width: "188px",
-                height: "24px",
-                top: "672px",
-                left: "724px",
-                gap: "8px",
-                marginRight: "260px",
-                marginTop: "20px",
-              }}
-            >
-              <input
-                className="form-check-input"
-                type="checkbox"
-                defaultValue="remember-me"
-                id="flexCheckDefault"
+            {passwordMatchError && (
+              <div
                 style={{
-                  width: "24px",
-                  height: "24px",
-                  border: "1.5px solid #347AFF",
-                  color: "#347AFF",
-                  fontFamily: "Arial",
-                  fontSize: "16px",
-                  fontWeight: "400",
-                  lineHeight: "24px",
-                  letterSpacing: "normal",
+                  width: "471px",
+                  color: "red",
+                  marginTop: "8px",
+                  fontSize: "14px",
                   textAlign: "left",
-                }}
-              />
-              <label
-                className="form-check-label"
-                htmlFor="flexCheckDefault"
-                style={{
-                  width: "156px",
-                  height: "24px",
-                  fontFamily: "Montserrat",
-                  fontSize: "16px",
-                  fontWeight: "400",
-                  lineHeight: "24px",
-                  letterSpacing: "-0.002em",
-                  textAlign: "left",
-                  color: "#FFFFFF",
                 }}
               >
-                ghi nhớ đăng nhập
-              </label>
-            </div>
-
+                Mật khẩu phải trùng nhau
+              </div>
+            )}
             <button
               className="mb-5"
-              onClick={handleLogin}
+              onClick={handleSave}
               style={{
                 width: "208px",
                 height: "56px",
@@ -235,30 +218,8 @@ const LoginForm: React.FC = () => {
                 marginTop: "48px",
               }}
             >
-              Đăng nhập
+              Lưu mật khẩu
             </button>
-            <a
-              className="mt-5"
-              href="/quenMK"
-              style={{
-                width: "139px",
-                height: "24px",
-                top: "1005px",
-                left: "890px",
-                fontFamily: "Montserrat",
-                fontSize: "16px",
-                fontWeight: "600",
-                lineHeight: "24px",
-                letterSpacing: "0em",
-                textAlign: "left",
-                color: "#FF7506",
-                textDecoration: "underline",
-                marginTop: "205px",
-                marginBottom: "51px",
-              }}
-            >
-              quên mật khẩu?
-            </a>
           </div>
         </div>
       </div>
@@ -266,4 +227,4 @@ const LoginForm: React.FC = () => {
   );
 };
 
-export default LoginForm;
+export default DatlaiMK;
