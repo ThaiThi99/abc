@@ -5,56 +5,44 @@ function HeaderLogin() {
 
   return (
     <>
-      <header className="p-3 mb-3">
-        <div className="container">
-          <div className="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-            <a
-              href="/"
-              className="d-flex align-items-center mb-2 mb-lg-0 link-body-emphasis text-decoration-none"
-            >
-              <svg
-                className="bi me-2"
-                width={40}
-                height={32}
-                role="img"
-                aria-label="Bootstrap"
-              >
-                <use xlinkHref="#bootstrap" />
-              </svg>
-            </a>
-            <ul className="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0"></ul>
+      <div>
+        <div
+          style={{
+            background: "#1E1E2E",
+          }}
+        >
+          <select
+            id="language"
+            value={language}
+            onChange={(e) => setLanguage(e.target.value)}
+            style={{
+              width: "143px",
+              height: "40px",
+              top: "24px",
+              left: "1697px",
+              padding: "8px 4px 8px 8px",
+              borderRadius: "4px",
+              border: "1px solid #C8C8DB",
+              gap: "8px",
+              color: "#C8C8DB",
+              backgroundColor: "transparent",
+              position: "relative",
+              background: "#1E1E2E",
+            }}
+          >
+            <option style={{ background: "#1E1E2E" }} value="vi">
+              Tiếng Việt
+            </option>
+            <option style={{ background: "#1E1E2E" }} value="en">
+              English
+            </option>
+            <option style={{ background: "#1E1E2E" }} value="fr">
+              French
+            </option>
+          </select>
+        </div>
 
-            {/* <div>
-              <select
-                id="language"
-                value={language}
-                onChange={(e) => setLanguage(e.target.value)}
-              >
-                <option value="vi">Tiếng Việt</option>
-                <option value="en">English</option>
-                <option value="fr">French</option>
-              </select>
-            </div> */}
-            <div
-              style={{
-                border: "1px solid white",
-                color: "white",
-                backgroundColor: "black",
-              }}
-            >
-              <select
-                id="language"
-                value={language}
-                onChange={(e) => setLanguage(e.target.value)}
-                style={{ color: "white", backgroundColor: "black" }}
-              >
-                <option value="vi">Tiếng Việt</option>
-                <option value="en">English</option>
-                <option value="fr">French</option>
-              </select>
-            </div>
-
-            {/* <div className="dropdown text-end">
+        {/* <div className="dropdown text-end">
               <a
                 href="#"
                 className="d-block link-body-emphasis text-decoration-none dropdown-toggle show"
@@ -104,9 +92,7 @@ function HeaderLogin() {
                 </li>
               </ul>
             </div> */}
-          </div>
-        </div>
-      </header>
+      </div>
     </>
   );
 }

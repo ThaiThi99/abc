@@ -36,6 +36,7 @@ const LoginForm: React.FC = () => {
                 borderRadius: "112px",
                 top: "116px",
                 left: "840px",
+                marginTop: "116px",
               }}
               src="images/logo.png"
               alt=""
@@ -54,6 +55,7 @@ const LoginForm: React.FC = () => {
                 letterSpacing: "-0.002em",
                 textAlign: "center",
                 color: "#FFFFFF",
+                marginTop: "40px",
               }}
             >
               Đăng nhập
@@ -65,6 +67,7 @@ const LoginForm: React.FC = () => {
                 top: "472px",
                 left: "724px",
                 gap: "8px",
+                marginTop: "28px",
               }}
             >
               <div
