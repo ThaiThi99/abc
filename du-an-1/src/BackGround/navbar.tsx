@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Navbar: React.FC = () => {
+function Navbar() {
   const [language, setLanguage] = useState("vi");
 
   return (
@@ -307,6 +307,9 @@ const Navbar: React.FC = () => {
               >
                 English
               </option>
+              <option style={{ background: "#1E1E2E" }} value="fr">
+                French
+              </option>
             </select>
           </div>
           <div
@@ -316,11 +319,12 @@ const Navbar: React.FC = () => {
               top: "24px",
               left: "1542px",
               gap: "8px",
+              marginRight: "24px",
               position: "absolute",
-              marginTop: "24px",
+              // marginTop: "24px",
             }}
           >
-            <a href="#">
+            <a href="/trang1" style={{ textDecoration: "none" }}>
               <img
                 src="images/admin.jpg"
                 alt="mdo"
@@ -328,9 +332,11 @@ const Navbar: React.FC = () => {
                   width: "40px",
                   height: "40.58px",
                   borderRadius: "200px",
+
+                  position: "absolute",
                 }}
               />
-              <p
+              <div
                 style={{
                   width: "74px",
                   height: "24px",
@@ -341,12 +347,14 @@ const Navbar: React.FC = () => {
                   letterSpacing: "-0.002em",
                   textAlign: "center",
                   color: "#F5F5FF",
+                  marginLeft: "35px",
                   position: "relative",
+                  textDecoration: "none",
                 }}
               >
                 Ng.Tuyết
-              </p>
-              <p
+              </div>
+              <div
                 style={{
                   width: "49px",
                   height: "17px",
@@ -357,17 +365,19 @@ const Navbar: React.FC = () => {
                   letterSpacing: "0.015em",
                   textAlign: "center",
                   color: "#B65100",
+                  marginLeft: "35px",
                   position: "relative",
+                  textDecoration: "none",
                 }}
               >
                 Admin
-              </p>
+              </div>
             </a>
           </div>
         </div>
       </div>
     </>
   );
-};
+}
 
 export default Navbar;

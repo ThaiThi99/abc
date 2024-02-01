@@ -1,0 +1,141 @@
+.ttcb {
+  width: 319px;
+  height: 54px;
+  top: 86px;
+  left: 208px;
+  font-family: "Montserrat";
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 48px;
+  letter-spacing: -0.002em;
+  text-align: left;
+  color: #f5f5ff;
+  position: absolute;
+}
+.avt {
+  width: 72px;
+  height: 72px;
+  top: 227px;
+  left: 176px;
+  padding: 14.13px 16.85px 19.72px 17px;
+  position: absolute;
+}
+.khung {
+  width: 1018px;
+  height: 528px;
+  top: 188px;
+  left: 229px;
+  position: absolute;
+}
+.ten {
+  width: 144px;
+  height: 24px;
+  top: 304px;
+  left: 68px;
+  font-family: "Montserrat";
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: -0.002em;
+  text-align: left;
+  color: #f5f5ff;
+  margin: 24px 68px 23px 68px;
+}
+.lablee {
+  width: 115px;
+  height: 24px;
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: -0.002em;
+  text-align: left;
+  color: #ffffff;
+}
+.inputt {
+  width: 274px;
+  height: 48px;
+  padding: 11px 24px 13px 16px;
+  border-radius: 8px;
+  background: #2b2b3f;
+  color: white;
+}
+.input1 {
+  width: 571px;
+  height: 48px;
+  padding: 11px 24px 13px 16px;
+  border-radius: 8px;
+  background: #2b2b3f;
+  color: white;
+}
+.icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 67px;
+  gap: 10px;
+  padding: 10px;
+}
+.khung1 {
+  width: 110px;
+  height: 130px;
+  padding: 16px;
+  text-align: center;
+}
+.textt {
+  width: 78px;
+  height: 36px;
+  opacity: 0.7;
+  font-family: "Montserrat";
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0.005em;
+  text-align: center;
+  color: #ffffff;
+}
+.dangxuat {
+  width: 78px;
+  height: 18px;
+  opacity: 0.7;
+  font-family: "Montserrat";
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0.005em;
+  text-align: center;
+  color: #ffffff;
+}
+.khung2 {
+  width: 110px;
+  height: 372px;
+  top: 188px;
+  left: 1810px;
+  position: absolute;
+  background: #72728880;
+}
+.modal {
+  /* Các thuộc tính cho vị trí và hiển thị của modal */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Một màu nền mờ để tạo hiệu ứng mờ xung quanh modal */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  /* Các thuộc tính cho nội dung của modal */
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 4px;
+}
+
+/* Các thuộc tính khác cho modal-content, ví dụ như kích thước, màu sắc, font chữ, ... */

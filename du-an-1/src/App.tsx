@@ -7,7 +7,8 @@ import QuenMatKhau from "./Login/quenmatkhau";
 import QuenMatKhau2 from "./Login/quenmatkhau2";
 import LinkLoi from "./Login/linkloi";
 import DatlaiMK from "./Login/datlaimk";
-import Trang1 from "./ttcoban/trang1";
+import Trang1 from "./QuanLyTT/trang1";
+import SuaThongTin from "./QuanLyTT/suaTT";
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
             </Routes>
             <Routes>
               <Route path="/trang1" element={<Trang1 />} />
+              <Route path="/suatt" element={<SuaThongTin />} />
             </Routes>
           </BrowserRouter>
         </div>
