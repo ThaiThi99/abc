@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import CustomOption from "./imgg";
 
 function HeaderLogin() {
   const [language, setLanguage] = useState("vi");
@@ -39,6 +40,16 @@ function HeaderLogin() {
             <option style={{ background: "#1E1E2E" }} value="fr">
               French
             </option>
+            {/* <CustomOption
+              value="vi"
+              label="Tiếng Việt"
+              imageUrl="/images/ENG.svg"
+            />
+            <CustomOption
+              value="option2"
+              label="Option 2"
+              imageUrl="/path/to/image2.jpg"
+            /> */}
           </select>
         </div>
       </div>

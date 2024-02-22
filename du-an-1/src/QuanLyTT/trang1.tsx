@@ -1,34 +1,21 @@
 import React, { useState } from "react";
 import Navbar from "../BackGround/navbar";
 import "../cssne/Trang1.css";
+import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Trang1: React.FC = () => {
   const [showModal, setShowModal] = useState(false);
-
-  const handleOpenModal = () => {
-    console.log("Đã nhấp vào chữ 'Đổi mật khẩu'");
-    console.log(showModal);
-    setShowModal(true);
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
+  const toggleShowPassword = () => {
+    setShowPassword(!showPassword);
   };
 
-  const handleCloseModal = () => {
-    console.log("Đã đóng modal");
-    setShowModal(false);
-  };
   return (
     <>
-      <div
-        style={{
-          display: "flex",
-          position: "absolute",
-          width: "100%",
-
-          height: "100%",
-          top: "10px",
-          right: "10px",
-          zIndex: "9999",
-        }}
-      >
+      <div className="thedau">
         <Navbar />
         <div className="ttcb">Thông tin cơ bản</div>
         <div className="khung">
@@ -169,7 +156,7 @@ const Trang1: React.FC = () => {
             </a>
           </div>
           <div className="khung1">
-            <div onClick={handleOpenModal}>
+            <div data-bs-toggle="modal" data-bs-target="#exampleModal">
               <img src="images/doimk.png" alt="doimk" className="icon" />
               <div className="textt">
                 Đổi <br /> mật khẩu
@@ -196,19 +183,148 @@ const Trang1: React.FC = () => {
             </a>
           </div>
         </div>
-        <div>
-          {showModal && (
-            <div className="modal">
-              <div className="modal-content">
-                {/* Nội dung form modal */}
-                <p style={{ color: "black" }}>SDsdm</p>
-                <form>
-                  {/* Các trường nhập mật khẩu mới, xác nhận mật khẩu, nút lưu, v.v. */}
-                  <div>lskf</div>
-                </form>
+        {/* showModal     */}
+        <div
+          className="modal fade"
+          id="exampleModal"
+          tabIndex={-1}
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div
+            className="modal-dialog"
+            style={{
+              display: "flex",
+            }}
+          >
+            <div
+              className="modal-content"
+              style={{
+                backgroundColor: "#3E3E5B",
+                width: "552px",
+                height: "512px",
+                borderRadius: "16px",
+              }}
+            >
+              <div className="modal-body">
+                <h5
+                  className="modal-title m-0"
+                  id="exampleModalLabel"
+                  style={{
+                    width: "234px",
+                    height: "24px",
+                    top: "32px",
+                    left: "159px",
+                    fontFamily: "Montserrat",
+                    fontSize: "24px",
+                    fontWeight: 700,
+                    lineHeight: "24px",
+                    letterSpacing: "-0.002em",
+                    textAlign: "center",
+                    color: "#F5F5FF",
+                  }}
+                >
+                  Thay đổi mật khẩu
+                </h5>
+                <div>
+                  <div className="matkhau">Mật khẩu hiện tại:</div>
+                  <div
+                    className="password-input-wrapper"
+                    style={{ position: "relative" }}
+                  >
+                    <input
+                      className="inputmk"
+                      type={showPassword ? "text" : "password"}
+                      id="password"
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
+                    />
+
+                    <FontAwesomeIcon
+                      className="faEyee"
+                      icon={showPassword ? faEyeSlash : faEye}
+                      onClick={toggleShowPassword}
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <div className="matkhau">Mật khẩu mới:</div>
+                  <div
+                    className="password-input-wrapper"
+                    style={{ position: "relative" }}
+                  >
+                    <input
+                      className="inputmk"
+                      type={showPassword ? "text" : "password"}
+                      id="password"
+                      value={confirmPassword}
+                      onChange={(e) => setConfirmPassword(e.target.value)}
+                    />
+
+                    <FontAwesomeIcon
+                      className="faEyee"
+                      icon={showPassword ? faEyeSlash : faEye}
+                      onClick={toggleShowPassword}
+                    />
+                  </div>
+                </div>
+                <div>
+                  <div className="matkhau">Nhập lại mật khẩu mới:</div>
+                  <div
+                    className="password-input-wrapper"
+                    style={{ position: "relative" }}
+                  >
+                    <input
+                      className="inputmk"
+                      type={showPassword ? "text" : "password"}
+                      id="password"
+                      value={confirmPassword}
+                      onChange={(e) => setConfirmPassword(e.target.value)}
+                    />
+
+                    <FontAwesomeIcon
+                      className="faEyee"
+                      icon={showPassword ? faEyeSlash : faEye}
+                      onClick={toggleShowPassword}
+                    />
+                  </div>
+                </div>
+                <div>
+                  <div
+                    style={{
+                      width: "368px",
+                      height: "48px",
+                      top: "424px",
+                      left: "92px",
+                      gap: "32px",
+                      position: "absolute",
+                    }}
+                  >
+                    <button
+                      className="butoon"
+                      style={{
+                        color: "#FF7506",
+                      }}
+                      data-bs-dismiss="modal"
+                    >
+                      Hủy
+                    </button>
+                    <button
+                      className="butoon"
+                      style={{
+                        color: "white",
+                        background: "#FF7506",
+                        marginLeft: "32px",
+                      }}
+                    >
+                      Lưu
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
-          )}
+          </div>
         </div>
       </div>
     </>

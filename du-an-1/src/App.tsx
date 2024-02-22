@@ -9,6 +9,7 @@ import LinkLoi from "./Login/linkloi";
 import DatlaiMK from "./Login/datlaimk";
 import Trang1 from "./QuanLyTT/trang1";
 import SuaThongTin from "./QuanLyTT/suaTT";
+import KhoBanGhi from "./QLKhoBanGhi/khobanghi";
 
 function App() {
   return (
@@ -40,6 +41,9 @@ function App() {
             <Routes>
               <Route path="/trang1" element={<Trang1 />} />
               <Route path="/suatt" element={<SuaThongTin />} />
+            </Routes>
+            <Routes>
+              <Route path="/khobanghi" element={<KhoBanGhi />} />
             </Routes>
           </BrowserRouter>
         </div>
