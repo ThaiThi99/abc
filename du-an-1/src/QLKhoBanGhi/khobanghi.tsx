@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Navbar from "../BackGround/navbar";
-import "../cssne/Trang1.css";
+import "../cssne/khobangi.css";
 
 const KhoBanGhi: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -41,18 +41,38 @@ const KhoBanGhi: React.FC = () => {
             value={searchTerm}
             onChange={handleInputChange}
             style={{
-              background: "#2B2B3F",
-              color: "#727288",
+              width: "100%",
+              height: "100%",
+              background: "transparent",
+              border: "none",
+              color: "#FFFFFF",
+              fontFamily: "Montserrat",
+              fontSize: "16px",
+              fontWeight: "600",
+              letterSpacing: "-0.002em",
+              outline: "none",
+              paddingLeft: 24,
+              paddingRight: 67,
             }}
           />
-          <button type="submit" style={{ background: "#2B2B3F" }}>
+          <a type="submit" style={{ background: "#2B2B3F" }}>
             <img src="images/search.png" alt="" />
-          </button>
+          </a>
         </form>
+
+        <div className="khungt">
+          <div className="khugne">
+            <a href="/suatt" style={{ textDecoration: "none" }}>
+              <img src="images/sua.png" alt="sua" className="icon1" />
+              <div className="texttt">Quản lý phê duyệt</div>
+            </a>
+          </div>
+        </div>
+
         <div
           style={{
             width: "1541px",
-            height: "722px",
+            height: "fit-content",
             top: "294px",
             left: "229px",
             padding: "16px 24px",
@@ -66,7 +86,8 @@ const KhoBanGhi: React.FC = () => {
           <table
             style={{
               width: "1485px",
-              height: "604px",
+              // height: "604px",
+              height: "fit-content",
             }}
           >
             <tr style={{ color: "#FFAC69" }}>
@@ -86,7 +107,7 @@ const KhoBanGhi: React.FC = () => {
               style={{
                 color: "#FFFFFF",
                 marginBottom: "1px",
-                borderBottom: "solid 1px white",
+                borderBottom: "1px solid #727288",
               }}
             >
               <td>1</td>
@@ -115,10 +136,10 @@ const KhoBanGhi: React.FC = () => {
               style={{
                 color: "#FFFFFF",
                 marginBottom: "1px",
-                borderBottom: "solid 1px white",
+                borderBottom: "solid 1px #727288",
               }}
             >
-              <td>1</td>
+              <td>2</td>
               <td>Mất em </td>
               <td>KRA40105463</td>
               <td>Phan Mạnh Quỳnh</td>
@@ -144,10 +165,10 @@ const KhoBanGhi: React.FC = () => {
               style={{
                 color: "#FFFFFF",
                 marginBottom: "1px",
-                borderBottom: "solid 1px white",
+                borderBottom: "solid 1px #727288",
               }}
             >
-              <td>1</td>
+              <td>3</td>
               <td>Mất em </td>
               <td>KRA40105463</td>
               <td>Phan Mạnh Quỳnh</td>
@@ -173,10 +194,10 @@ const KhoBanGhi: React.FC = () => {
               style={{
                 color: "#FFFFFF",
                 marginBottom: "1px",
-                borderBottom: "solid 1px white",
+                borderBottom: "solid 1px #727288",
               }}
             >
-              <td>1</td>
+              <td>4</td>
               <td>Mất em </td>
               <td>KRA40105463</td>
               <td>Phan Mạnh Quỳnh</td>
@@ -203,10 +224,10 @@ const KhoBanGhi: React.FC = () => {
               style={{
                 color: "#FFFFFF",
                 marginBottom: "1px",
-                borderBottom: "solid 1px white",
+                borderBottom: "solid 1px #727288",
               }}
             >
-              <td>1</td>
+              <td>5</td>
               <td>Mất em </td>
               <td>KRA40105463</td>
               <td>Phan Mạnh Quỳnh</td>
@@ -233,10 +254,10 @@ const KhoBanGhi: React.FC = () => {
               style={{
                 color: "#FFFFFF",
                 marginBottom: "1px",
-                borderBottom: "solid 1px white",
+                borderBottom: "solid 1px #727288",
               }}
             >
-              <td>1</td>
+              <td>6</td>
               <td>Mất em </td>
               <td>KRA40105463</td>
               <td>Phan Mạnh Quỳnh</td>
@@ -263,10 +284,10 @@ const KhoBanGhi: React.FC = () => {
               style={{
                 color: "#FFFFFF",
                 marginBottom: "1px",
-                borderBottom: "solid 1px white",
+                borderBottom: "solid 1px #727288",
               }}
             >
-              <td>1</td>
+              <td>7</td>
               <td>Mất em </td>
               <td>KRA40105463</td>
               <td>Phan Mạnh Quỳnh</td>
@@ -293,10 +314,10 @@ const KhoBanGhi: React.FC = () => {
               style={{
                 color: "#FFFFFF",
                 marginBottom: "1px",
-                borderBottom: "solid 1px white",
+                borderBottom: "solid 1px #727288",
               }}
             >
-              <td>1</td>
+              <td>8</td>
               <td>Mất em </td>
               <td>KRA40105463</td>
               <td>Phan Mạnh Quỳnh</td>
@@ -323,10 +344,10 @@ const KhoBanGhi: React.FC = () => {
               style={{
                 color: "#FFFFFF",
                 marginBottom: "1px",
-                borderBottom: "solid 1px white",
+                borderBottom: "solid 1px #727288",
               }}
             >
-              <td>1</td>
+              <td>9</td>
               <td>Mất em </td>
               <td>KRA40105463</td>
               <td>Phan Mạnh Quỳnh</td>
@@ -353,10 +374,10 @@ const KhoBanGhi: React.FC = () => {
               style={{
                 color: "#FFFFFF",
                 marginBottom: "1px",
-                borderBottom: "solid 1px white",
+                borderBottom: "solid 1px #727288",
               }}
             >
-              <td>1</td>
+              <td>10</td>
               <td>Mất em </td>
               <td>KRA40105463</td>
               <td>Phan Mạnh Quỳnh</td>
@@ -383,10 +404,10 @@ const KhoBanGhi: React.FC = () => {
               style={{
                 color: "#FFFFFF",
                 marginBottom: "1px",
-                borderBottom: "solid 1px white",
+                borderBottom: "solid 1px #727288",
               }}
             >
-              <td>1</td>
+              <td>11</td>
               <td>Mất em </td>
               <td>KRA40105463</td>
               <td>Phan Mạnh Quỳnh</td>
@@ -413,10 +434,10 @@ const KhoBanGhi: React.FC = () => {
               style={{
                 color: "#FFFFFF",
                 marginBottom: "1px",
-                borderBottom: "solid 1px white",
+                borderBottom: "solid 1px #727288",
               }}
             >
-              <td>1</td>
+              <td>12</td>
               <td>Mất em </td>
               <td>KRA40105463</td>
               <td>Phan Mạnh Quỳnh</td>
@@ -438,6 +459,86 @@ const KhoBanGhi: React.FC = () => {
                 </a>
               </td>
             </tr>
+            <div
+              style={{
+                width: "fit-content",
+                maxWidth: "1485px",
+                height: "fit-content",
+                minHeight: "32px",
+                display: "flex",
+                justifyContent: "space-between",
+                gap: "8px",
+                marginTop: 30,
+              }}
+            >
+              <div
+                style={{
+                  width: "max-content",
+                  maxWidth: "279.82px",
+                  height: "fit-content",
+                  minHeight: "32px",
+                  color: "#F5F5FF",
+                }}
+              >
+                Hiển thị
+                <div style={{ display: "inline-flex" }}>
+                  <div
+                    style={{
+                      width: "48.37px",
+                      height: "32px",
+                      borderRadius: "4px",
+                      margin: "0px 8px 0px 8px",
+                      border: "1px solid #FF7506",
+                      background: "#2B2B3F",
+                      color: "#FFFFFF",
+                      fontFamily: "Montserrat",
+                      fontSize: "16px",
+                      fontWeight: "600",
+                      letterSpacing: "-0.002em",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                    }}
+                  >
+                    12
+                  </div>
+                </div>
+                hàng trong mỗi trang
+              </div>
+
+              <div
+                style={{
+                  width: "203px",
+                  height: "26px",
+                  position: "absolute",
+                  right: 50,
+                  color: "#F5F5FF",
+                }}
+                className="mao"
+              >
+                <a href="/#" className="thea">
+                  &lt;
+                </a>
+                <a href="/#" className="thea ">
+                  1
+                </a>
+                <a href="/#" className="thea active">
+                  2
+                </a>
+                <a href="/#" className="thea">
+                  3
+                </a>
+                <a href="/#" className="thea">
+                  ...
+                </a>
+                <a href="/#" className="thea">
+                  100
+                </a>
+                <a href="/#" className="thea">
+                  &gt;
+                </a>
+              </div>
+            </div>
           </table>
         </div>
       </div>

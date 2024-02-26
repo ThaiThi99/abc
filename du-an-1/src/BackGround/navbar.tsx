@@ -257,7 +257,7 @@ function Navbar() {
             width: "1749px",
             height: "80px",
             left: "171px",
-            position: "fixed",
+            position: "absolute",
             top: "10px",
             right: "10px",
             zIndex: "9999",
