@@ -11,6 +11,8 @@ import Trang1 from "./QuanLyTT/trang1";
 import SuaThongTin from "./QuanLyTT/suaTT";
 import KhoBanGhi from "./QLKhoBanGhi/khobanghi";
 import DSHopDong from "./hopdonguyquyen/DSHopDong";
+import KhoBanGhi1 from "./QLKhoBanGhi/khobanghi1";
+import PheDuyetBG from "./QLKhoBanGhi/pheduyetBG";
 
 function App() {
   return (
@@ -48,6 +50,8 @@ function App() {
             </Routes>
             <Routes>
               <Route path="/khobanghi" element={<KhoBanGhi />} />
+              <Route path="/khobanghi1" element={<KhoBanGhi1 />} />
+              <Route path="/pheduyetbg" element={<PheDuyetBG />} />
             </Routes>
           </BrowserRouter>
         </div>
