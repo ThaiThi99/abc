@@ -132,19 +132,19 @@ const KhoBanGhi1: React.FC = () => {
             left: "1690px",
           }}
         >
-          <a href="#">
+          <a href="/khobanghi1">
             <img src="images/List.png" className="icon4" alt="" />
           </a>
         </div>
 
         <div
-          className="text4"
+          className="textt4"
           style={{
             top: "238px",
             left: "1738px",
           }}
         >
-          <a href="#">
+          <a href="/pheduyetbg">
             <img src="images/tab.png" className="icon4" alt="" />
           </a>
         </div>

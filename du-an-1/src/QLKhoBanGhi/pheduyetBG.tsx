@@ -2,6 +2,15 @@ import React, { useState } from "react";
 import Navbar from "../BackGround/navbar";
 import "../cssne/khobangi.css";
 
+interface DSNhac {
+  id: number;
+  hinh: string;
+  title: string;
+  casi: string;
+  sangtac: string;
+  sohopdong: string;
+  isChecked: boolean;
+}
 const PheDuyetBG: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState("");
 
@@ -14,6 +23,102 @@ const PheDuyetBG: React.FC = () => {
     // Xử lý logic tìm kiếm
     console.log("Search term:", searchTerm);
   };
+  const [danhsachs, setdanhsachs] = useState<DSNhac[]>([
+    {
+      id: 1,
+      hinh: "hoa.png",
+      title: "Handcrafted Fresh Bacon Multy",
+      casi: "Ca sĩ: Bella Poarch",
+      sangtac: "Sáng tác: Leilani Zulauf",
+      sohopdong: "Số hợp đồng: HD395738503",
+      isChecked: false,
+    },
+    {
+      id: 2,
+      hinh: "hoa1.png",
+      title: "Handcrafted Fresh Bacon Multy",
+      casi: "Ca sĩ: Bella Poarch",
+      sangtac: "Sáng tác: Leilani Zulauf",
+      sohopdong: "Số hợp đồng: HD395738503",
+      isChecked: false,
+    },
+    {
+      id: 3,
+      hinh: "hoa2.png",
+      title: "Handcrafted Fresh Bacon Multy",
+      casi: "Ca sĩ: Bella Poarch",
+      sangtac: "Sáng tác: Leilani Zulauf",
+      sohopdong: "Số hợp đồng: HD395738503",
+      isChecked: false,
+    },
+    {
+      id: 4,
+      hinh: "hoa3.png",
+      title: "Handcrafted Fresh Bacon Multy",
+      casi: "Ca sĩ: Bella Poarch",
+      sangtac: "Sáng tác: Leilani Zulauf",
+      sohopdong: "Số hợp đồng: HD395738503",
+      isChecked: false,
+    },
+    {
+      id: 5,
+      hinh: "hoa4.png",
+      title: "Handcrafted Fresh Bacon Multy",
+      casi: "Ca sĩ: Bella Poarch",
+      sangtac: "Sáng tác: Leilani Zulauf",
+      sohopdong: "Số hợp đồng: HD395738503",
+      isChecked: false,
+    },
+    {
+      id: 6,
+      hinh: "hoa5.png",
+      title: "Handcrafted Fresh Bacon Multy",
+      casi: "Ca sĩ: Bella Poarch",
+      sangtac: "Sáng tác: Leilani Zulauf",
+      sohopdong: "Số hợp đồng: HD395738503",
+      isChecked: false,
+    },
+    {
+      id: 7,
+      hinh: "hoa6.png",
+      title: "Handcrafted Fresh Bacon Multy",
+      casi: "Ca sĩ: Bella Poarch",
+      sangtac: "Sáng tác: Leilani Zulauf",
+      sohopdong: "Số hợp đồng: HD395738503",
+      isChecked: false,
+    },
+    {
+      id: 8,
+      hinh: "hoa7.png",
+      title: "Handcrafted Fresh Bacon Multy",
+      casi: "Ca sĩ: Bella Poarch",
+      sangtac: "Sáng tác: Leilani Zulauf",
+      sohopdong: "Số hợp đồng: HD395738503",
+      isChecked: false,
+    },
+    // Thêm các học sinh khác vào đây
+  ]);
+  const handleCheckAll = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const checked = event.target.checked;
+    const updatedDanhsach = danhsachs.map((danhsach) => ({
+      ...danhsach,
+      isChecked: checked,
+    }));
+    setdanhsachs(updatedDanhsach);
+  };
+  const handleCheckSingle = (id: number) => {
+    const updatedDanhsach = danhsachs.map((danhsach) => {
+      if (danhsach.id === id) {
+        return {
+          ...danhsach,
+          isChecked: !danhsach.isChecked,
+        };
+      }
+      return danhsach;
+    });
+    setdanhsachs(updatedDanhsach);
+  };
+  const urlImage = `/images/`;
 
   return (
     <>
@@ -79,49 +184,32 @@ const PheDuyetBG: React.FC = () => {
           <option value="manufacturer">Video</option>
         </select>
         <div
-          className="textt4"
           style={{
-            width: "148px",
-            top: "238px",
-            left: "810px",
+            width: "139px",
+            height: "24px",
+            top: "240px",
+            left: "770px",
+            gap: "4px",
+            position: "absolute",
+            color: "white",
           }}
         >
-          Thời hạn sử dụng:
+          <div style={{ border: "1px solid #347AFF", width: 24, height: 24 }}>
+            <input
+              type="checkbox"
+              onChange={handleCheckAll}
+              style={{
+                width: "100%",
+                height: "100%",
+              }}
+            />
+            <span
+              style={{ marginBottom: 4, position: "absolute", marginLeft: 2 }}
+            >
+              Chọn tất cả
+            </span>
+          </div>
         </div>
-        <select
-          className="select4"
-          style={{
-            width: "131px",
-            top: "230px",
-            left: "974px",
-          }}
-        >
-          <option value="all">Tất cả</option>
-          <option value="performer">Còn thời hạn</option>
-          <option value="manufacturer">Hết hạn</option>
-        </select>
-        <div
-          className="textt4"
-          style={{
-            width: "88px",
-            top: "238px",
-            left: "1169px",
-          }}
-        >
-          Trạng thái:
-        </div>
-        <select
-          className="select4"
-          style={{
-            width: "200px",
-            top: "230px",
-            left: "1273px",
-          }}
-        >
-          <option value="all">Tất cả</option>
-          <option value="performer">Duyệt bởi người dùng</option>
-          <option value="manufacturer">Duyệt tự động</option>
-        </select>
         {/* danh sach dropdown */}
 
         {/* icon menu */}
@@ -132,19 +220,19 @@ const PheDuyetBG: React.FC = () => {
             left: "1690px",
           }}
         >
-          <a href="#">
+          <a href="/khobanghi1">
             <img src="images/List.png" className="icon4" alt="" />
           </a>
         </div>
 
         <div
-          className="text4"
+          className="textt4"
           style={{
             top: "238px",
             left: "1738px",
           }}
         >
-          <a href="#">
+          <a href="/pheduyetbg">
             <img src="images/tab.png" className="icon4" alt="" />
           </a>
         </div>
@@ -174,310 +262,64 @@ const PheDuyetBG: React.FC = () => {
           <div
             className="row"
             style={{
-              width: "1540px",
-              height: "316px",
               justifyContent: "space-between",
             }}
           >
-            <div className="formtong4 col">
-              <img src="images/hoa.png" alt="" className="hinhanh4" />
-              <div style={{ width: 342, height: 156 }}>
-                <div className="text4">
-                  <div className="tieude4">Handcrafted Fresh Bacon Multy</div>
-                  <div className="noidung4">Ca sĩ: Bella Poarch</div>
-                  <div className="noidung4">Sáng tác: Leilani Zulauf</div>
-                  <div className="noidung4">Số hợp đồng: HD395738503</div>
-                  <div className="khungngoai4">
-                    <div className="khungtrong4">
-                      <div className="theloai4">Thể loại</div>
-                      <div className="loai4">Pop</div>
-                    </div>
-                    <div className="khungtrong4" style={{ width: 68 }}>
-                      <div className="theloai4" style={{ width: 45 }}>
-                        Định dạng
+            {danhsachs.map((danhsach) => (
+              <div className="formtong4 col" key={danhsach.id}>
+                <img
+                  src={urlImage + danhsach.hinh}
+                  alt=""
+                  className="hinhanh4"
+                />
+                <div style={{ width: 342, height: 156 }}>
+                  <div className="text4">
+                    <div className="tieude4">{danhsach.title}</div>
+                    <div className="noidung4">{danhsach.casi}</div>
+                    <div className="noidung4">{danhsach.sangtac}</div>
+                    <div className="noidung4">{danhsach.sohopdong}</div>
+                    <div className="khungngoai4">
+                      <div className="khungtrong4">
+                        <div className="theloai4">Thể loại</div>
+                        <div className="loai4">Pop</div>
                       </div>
-                      <div className="loai4">Audio</div>
-                    </div>
-                    <div className="khungtrong4" style={{ width: 68 }}>
-                      <div className="theloai4" style={{ width: 45 }}>
-                        Thời lượng
+                      <div className="khungtrong4" style={{ width: 68 }}>
+                        <div className="theloai4" style={{ width: 45 }}>
+                          Định dạng
+                        </div>
+                        <div className="loai4">Audio</div>
                       </div>
-                      <div className="loai4">03:00</div>
-                    </div>
-                  </div>
-                  <div className="sua4">
-                    <img
-                      src="images/sua.png"
-                      alt=""
-                      style={{ width: "100%", height: "100%" }}
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="formtong4 col">
-              <img src="images/hoa1.png" alt="" className="hinhanh4" />
-              <div style={{ width: 342, height: 156 }}>
-                <div className="text4">
-                  <div className="tieude4">Handcrafted Fresh Bacon Multy</div>
-                  <div className="noidung4">Ca sĩ: Bella Poarch</div>
-                  <div className="noidung4">Sáng tác: Leilani Zulauf</div>
-                  <div className="noidung4">Số hợp đồng: HD395738503</div>
-                  <div className="khungngoai4">
-                    <div className="khungtrong4">
-                      <div className="theloai4">Thể loại</div>
-                      <div className="loai4">Pop</div>
-                    </div>
-                    <div className="khungtrong4" style={{ width: 68 }}>
-                      <div className="theloai4" style={{ width: 45 }}>
-                        Định dạng
+                      <div className="khungtrong4" style={{ width: 68 }}>
+                        <div className="theloai4" style={{ width: 45 }}>
+                          Thời lượng
+                        </div>
+                        <div className="loai4">03:00</div>
                       </div>
-                      <div className="loai4">Audio</div>
                     </div>
-                    <div className="khungtrong4" style={{ width: 68 }}>
-                      <div className="theloai4" style={{ width: 45 }}>
-                        Thời lượng
-                      </div>
-                      <div className="loai4">03:00</div>
+                    <div
+                      className="sua4"
+                      style={{
+                        width: "24px",
+                        height: "24px",
+                        border: "1px solid #347AFF",
+                      }}
+                    >
+                      <input
+                        type="checkbox"
+                        checked={danhsach.isChecked}
+                        onChange={() => handleCheckSingle(danhsach.id)}
+                        style={{
+                          width: "100%",
+                          height: "100%",
+                        }}
+                      />
                     </div>
-                  </div>
-                  <div className="sua4">
-                    <img
-                      src="images/sua.png"
-                      alt=""
-                      style={{ width: "100%", height: "100%" }}
-                    />
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="formtong4 col">
-              <img src="images/hoa2.png" alt="" className="hinhanh4" />
-              <div style={{ width: 342, height: 156 }}>
-                <div className="text4">
-                  <div className="tieude4">Handcrafted Fresh Bacon Multy</div>
-                  <div className="noidung4">Ca sĩ: Bella Poarch</div>
-                  <div className="noidung4">Sáng tác: Leilani Zulauf</div>
-                  <div className="noidung4">Số hợp đồng: HD395738503</div>
-                  <div className="khungngoai4">
-                    <div className="khungtrong4">
-                      <div className="theloai4">Thể loại</div>
-                      <div className="loai4">Pop</div>
-                    </div>
-                    <div className="khungtrong4" style={{ width: 68 }}>
-                      <div className="theloai4" style={{ width: 45 }}>
-                        Định dạng
-                      </div>
-                      <div className="loai4">Audio</div>
-                    </div>
-                    <div className="khungtrong4" style={{ width: 68 }}>
-                      <div className="theloai4" style={{ width: 45 }}>
-                        Thời lượng
-                      </div>
-                      <div className="loai4">03:00</div>
-                    </div>
-                  </div>
-                  <div className="sua4">
-                    <img
-                      src="images/sua.png"
-                      alt=""
-                      style={{ width: "100%", height: "100%" }}
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="formtong4 col">
-              <img src="images/hoa3.png" alt="" className="hinhanh4" />
-              <div style={{ width: 342, height: 156 }}>
-                <div className="text4">
-                  <div className="tieude4">Handcrafted Fresh Bacon Multy</div>
-                  <div className="noidung4">Ca sĩ: Bella Poarch</div>
-                  <div className="noidung4">Sáng tác: Leilani Zulauf</div>
-                  <div className="noidung4">Số hợp đồng: HD395738503</div>
-                  <div className="khungngoai4">
-                    <div className="khungtrong4">
-                      <div className="theloai4">Thể loại</div>
-                      <div className="loai4">Pop</div>
-                    </div>
-                    <div className="khungtrong4" style={{ width: 68 }}>
-                      <div className="theloai4" style={{ width: 45 }}>
-                        Định dạng
-                      </div>
-                      <div className="loai4">Audio</div>
-                    </div>
-                    <div className="khungtrong4" style={{ width: 68 }}>
-                      <div className="theloai4" style={{ width: 45 }}>
-                        Thời lượng
-                      </div>
-                      <div className="loai4">03:00</div>
-                    </div>
-                  </div>
-                  <div className="sua4">
-                    <img
-                      src="images/sua.png"
-                      alt=""
-                      style={{ width: "100%", height: "100%" }}
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
-          <div
-            className="row"
-            style={{
-              width: "1540px",
-              height: "316px",
-              justifyContent: "space-between",
-              marginTop: 29,
-            }}
-          >
-            <div className="formtong4 col">
-              <img src="images/hoa4.png" alt="" className="hinhanh4" />
-              <div style={{ width: 342, height: 156 }}>
-                <div className="text4">
-                  <div className="tieude4">Handcrafted Fresh Bacon Multy</div>
-                  <div className="noidung4">Ca sĩ: Bella Poarch</div>
-                  <div className="noidung4">Sáng tác: Leilani Zulauf</div>
-                  <div className="noidung4">Số hợp đồng: HD395738503</div>
-                  <div className="khungngoai4">
-                    <div className="khungtrong4">
-                      <div className="theloai4">Thể loại</div>
-                      <div className="loai4">Pop</div>
-                    </div>
-                    <div className="khungtrong4" style={{ width: 68 }}>
-                      <div className="theloai4" style={{ width: 45 }}>
-                        Định dạng
-                      </div>
-                      <div className="loai4">Audio</div>
-                    </div>
-                    <div className="khungtrong4" style={{ width: 68 }}>
-                      <div className="theloai4" style={{ width: 45 }}>
-                        Thời lượng
-                      </div>
-                      <div className="loai4">03:00</div>
-                    </div>
-                  </div>
-                  <div className="sua4">
-                    <img
-                      src="images/sua.png"
-                      alt=""
-                      style={{ width: "100%", height: "100%" }}
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="formtong4 col">
-              <img src="images/hoa5.png" alt="" className="hinhanh4" />
-              <div style={{ width: 342, height: 156 }}>
-                <div className="text4">
-                  <div className="tieude4">Handcrafted Fresh Bacon Multy</div>
-                  <div className="noidung4">Ca sĩ: Bella Poarch</div>
-                  <div className="noidung4">Sáng tác: Leilani Zulauf</div>
-                  <div className="noidung4">Số hợp đồng: HD395738503</div>
-                  <div className="khungngoai4">
-                    <div className="khungtrong4">
-                      <div className="theloai4">Thể loại</div>
-                      <div className="loai4">Pop</div>
-                    </div>
-                    <div className="khungtrong4" style={{ width: 68 }}>
-                      <div className="theloai4" style={{ width: 45 }}>
-                        Định dạng
-                      </div>
-                      <div className="loai4">Audio</div>
-                    </div>
-                    <div className="khungtrong4" style={{ width: 68 }}>
-                      <div className="theloai4" style={{ width: 45 }}>
-                        Thời lượng
-                      </div>
-                      <div className="loai4">03:00</div>
-                    </div>
-                  </div>
-                  <div className="sua4">
-                    <img
-                      src="images/sua.png"
-                      alt=""
-                      style={{ width: "100%", height: "100%" }}
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="formtong4 col">
-              <img src="images/hoa6.png" alt="" className="hinhanh4" />
-              <div style={{ width: 342, height: 156 }}>
-                <div className="text4">
-                  <div className="tieude4">Handcrafted Fresh Bacon Multy</div>
-                  <div className="noidung4">Ca sĩ: Bella Poarch</div>
-                  <div className="noidung4">Sáng tác: Leilani Zulauf</div>
-                  <div className="noidung4">Số hợp đồng: HD395738503</div>
-                  <div className="khungngoai4">
-                    <div className="khungtrong4">
-                      <div className="theloai4">Thể loại</div>
-                      <div className="loai4">Pop</div>
-                    </div>
-                    <div className="khungtrong4" style={{ width: 68 }}>
-                      <div className="theloai4" style={{ width: 45 }}>
-                        Định dạng
-                      </div>
-                      <div className="loai4">Audio</div>
-                    </div>
-                    <div className="khungtrong4" style={{ width: 68 }}>
-                      <div className="theloai4" style={{ width: 45 }}>
-                        Thời lượng
-                      </div>
-                      <div className="loai4">03:00</div>
-                    </div>
-                  </div>
-                  <div className="sua4">
-                    <img
-                      src="images/sua.png"
-                      alt=""
-                      style={{ width: "100%", height: "100%" }}
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="formtong4 col">
-              <img src="images/hoa7.png" alt="" className="hinhanh4" />
-              <div style={{ width: 342, height: 156 }}>
-                <div className="text4">
-                  <div className="tieude4">Handcrafted Fresh Bacon Multy</div>
-                  <div className="noidung4">Ca sĩ: Bella Poarch</div>
-                  <div className="noidung4">Sáng tác: Leilani Zulauf</div>
-                  <div className="noidung4">Số hợp đồng: HD395738503</div>
-                  <div className="khungngoai4">
-                    <div className="khungtrong4">
-                      <div className="theloai4">Thể loại</div>
-                      <div className="loai4">Pop</div>
-                    </div>
-                    <div className="khungtrong4" style={{ width: 68 }}>
-                      <div className="theloai4" style={{ width: 45 }}>
-                        Định dạng
-                      </div>
-                      <div className="loai4">Audio</div>
-                    </div>
-                    <div className="khungtrong4" style={{ width: 68 }}>
-                      <div className="theloai4" style={{ width: 45 }}>
-                        Thời lượng
-                      </div>
-                      <div className="loai4">03:00</div>
-                    </div>
-                  </div>
-                  <div className="sua4">
-                    <img
-                      src="images/sua.png"
-                      alt=""
-                      style={{ width: "100%", height: "100%" }}
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+
           <div className="khungPT4">
             <div className="ht4">
               Hiển thị
