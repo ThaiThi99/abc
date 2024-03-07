@@ -13,6 +13,9 @@ import KhoBanGhi from "./QLKhoBanGhi/khobanghi";
 import DSHopDong from "./hopdonguyquyen/DSHopDong";
 import KhoBanGhi1 from "./QLKhoBanGhi/khobanghi1";
 import PheDuyetBG from "./QLKhoBanGhi/pheduyetBG";
+import PheDuyetBG1 from "./QLKhoBanGhi/pheduyetBG1";
+import ChiTietHopDong from "./hopdonguyquyen/ChiTietHopDong";
+import CTBanGhi from "./QLKhoBanGhi/ctbanghi";
 
 function App() {
   return (
@@ -47,11 +50,14 @@ function App() {
             </Routes>
             <Routes>
               <Route path="/dshopdong" element={<DSHopDong />} />
+              <Route path="/cthopdong" element={<ChiTietHopDong />} />
             </Routes>
             <Routes>
               <Route path="/khobanghi" element={<KhoBanGhi />} />
               <Route path="/khobanghi1" element={<KhoBanGhi1 />} />
               <Route path="/pheduyetbg" element={<PheDuyetBG />} />
+              <Route path="/pheduyetbg1" element={<PheDuyetBG1 />} />
+              <Route path="/ctbanghi" element={<CTBanGhi />} />
             </Routes>
           </BrowserRouter>
         </div>

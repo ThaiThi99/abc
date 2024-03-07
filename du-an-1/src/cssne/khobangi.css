@@ -224,7 +224,7 @@
   display: flex;
   justify-content: space-between;
   gap: 8px;
-  margin-top: 62px;
+  /* margin-top: 33px; */
 }
 .ht4 {
   width: max-content;
@@ -250,3 +250,20 @@
   align-items: center;
 }
 /* phân trang */
+
+/* chi tiết bản ghi */
+.ttbg4 {
+  width: 224px;
+  height: 24px;
+  top: 32px;
+  left: 174px;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: -0.002em;
+  text-align: center;
+  color: #ff7506;
+  position: absolute;
+}
+/* chi tiết bản ghi */

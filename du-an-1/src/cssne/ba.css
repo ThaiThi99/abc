@@ -67,3 +67,11 @@
   align-items: center;
 }
 /* css phân trang */
+.circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #f5f5ff;
+  display: inline-block;
+  margin-left: 4px;
+}
