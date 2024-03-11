@@ -16,6 +16,7 @@ import PheDuyetBG from "./QLKhoBanGhi/pheduyetBG";
 import PheDuyetBG1 from "./QLKhoBanGhi/pheduyetBG1";
 import ChiTietHopDong from "./hopdonguyquyen/ChiTietHopDong";
 import CTBanGhi from "./QLKhoBanGhi/ctbanghi";
+import DSPlayList from "./QLplaylist/Dsplaylist";
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
           }}
         >
           <BrowserRouter>
+            {/* login */}
             <Routes>
               <Route path="/" element={<LoginForm />} />
               <Route path="/quenMK" element={<QuenMatKhau />} />
@@ -44,20 +46,27 @@ function App() {
               <Route path="/linkloi" element={<LinkLoi />} />
               <Route path="/datlaimk" element={<DatlaiMK />} />
             </Routes>
+            {/* qltt */}
             <Routes>
               <Route path="/trang1" element={<Trang1 />} />
               <Route path="/suatt" element={<SuaThongTin />} />
             </Routes>
+            {/* quản lý hợp đồng */}
             <Routes>
               <Route path="/dshopdong" element={<DSHopDong />} />
               <Route path="/cthopdong" element={<ChiTietHopDong />} />
             </Routes>
+            {/* quản lý kho bản ghi */}
             <Routes>
               <Route path="/khobanghi" element={<KhoBanGhi />} />
               <Route path="/khobanghi1" element={<KhoBanGhi1 />} />
               <Route path="/pheduyetbg" element={<PheDuyetBG />} />
               <Route path="/pheduyetbg1" element={<PheDuyetBG1 />} />
               <Route path="/ctbanghi" element={<CTBanGhi />} />
+            </Routes>
+            {/* quản lý play list */}
+            <Routes>
+              <Route path="/dsplaylist" element={<DSPlayList />} />
             </Routes>
           </BrowserRouter>
         </div>

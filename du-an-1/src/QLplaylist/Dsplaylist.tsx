@@ -13,9 +13,8 @@ interface DSNhac {
   maisrc: string;
   sohopdong: string;
   ngaytai: string;
-  isChecked: boolean;
 }
-const PheDuyetBG1: React.FC = () => {
+const DSPlayList: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState("");
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -185,26 +184,7 @@ const PheDuyetBG1: React.FC = () => {
       isChecked: false,
     },
   ]);
-  const handleCheckAll = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const checked = event.target.checked;
-    const updatedDanhsach = danhsachs.map((danhsach) => ({
-      ...danhsach,
-      isChecked: checked,
-    }));
-    setdanhsachs(updatedDanhsach);
-  };
-  const handleCheckSingle = (id: number) => {
-    const updatedDanhsach = danhsachs.map((danhsach) => {
-      if (danhsach.id === id) {
-        return {
-          ...danhsach,
-          isChecked: !danhsach.isChecked,
-        };
-      }
-      return danhsach;
-    });
-    setdanhsachs(updatedDanhsach);
-  };
+
   const urlImage = `/images/`;
 
   return (
@@ -615,4 +595,4 @@ const PheDuyetBG1: React.FC = () => {
     </>
   );
 };
-export default PheDuyetBG1;
+export default DSPlayList;
