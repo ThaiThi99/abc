@@ -17,6 +17,7 @@ import PheDuyetBG1 from "./QLKhoBanGhi/pheduyetBG1";
 import ChiTietHopDong from "./hopdonguyquyen/ChiTietHopDong";
 import CTBanGhi from "./QLKhoBanGhi/ctbanghi";
 import DSPlayList from "./QLplaylist/Dsplaylist";
+import DSPlayList1 from "./QLplaylist/Dsplaylist1";
 
 function App() {
   return (
@@ -67,6 +68,7 @@ function App() {
             {/* quản lý play list */}
             <Routes>
               <Route path="/dsplaylist" element={<DSPlayList />} />
+              <Route path="/dsplaylist1" element={<DSPlayList1 />} />
             </Routes>
           </BrowserRouter>
         </div>

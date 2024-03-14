@@ -1,18 +1,21 @@
 import React, { useState } from "react";
 import Navbar from "../BackGround/navbar";
 import "../cssne/khobangi.css";
+import "../cssne/playlist.css";
 
 interface DSNhac {
   id: number;
-  tenbg: string;
-  theloai: string;
-  dinhdang: string;
+  tieude: string;
+  sobg: string;
   thoiluong: string;
-  casi: string;
-  tacgia: string;
-  maisrc: string;
-  sohopdong: string;
-  ngaytai: string;
+  pop: string;
+  chill: string;
+  dingga: string;
+  songs: string;
+  lofi: string;
+  bacham: string;
+  ngaytao: string;
+  nguoitao: string;
 }
 const DSPlayList: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -29,159 +32,185 @@ const DSPlayList: React.FC = () => {
   const [danhsachs, setdanhsachs] = useState<DSNhac[]>([
     {
       id: 1,
-      tenbg: "Gorgeous Wooden Bike",
-      theloai: "Ballad",
-      dinhdang: "Audio",
-      thoiluong: "3:12",
-      casi: "Phan Mạnh Quỳnh",
-      tacgia: "Phan Mạnh Quỳnh",
-      maisrc: "KRA40105463",
-      sohopdong: "HD395738503",
-      ngaytai: "12/05/2021  16:46:12",
-      isChecked: false,
+      tieude: "Top ca khúc 2021",
+      sobg: "20",
+      thoiluong: "01:04:27",
+      pop: "Pop",
+      chill: "Chill",
+      dingga: "Digga",
+      songs: "Songs",
+      lofi: "Lofi",
+      bacham: "...",
+      ngaytao: "22/10/2020",
+      nguoitao: "Cindy Cường",
     },
     {
       id: 2,
-      tenbg: "Gorgeous Wooden Bike",
-      theloai: "Ballad",
-      dinhdang: "Audio",
-      thoiluong: "3:12",
-      casi: "Phan Mạnh Quỳnh",
-      tacgia: "Phan Mạnh Quỳnh",
-      maisrc: "KRA40105463",
-      sohopdong: "HD395738503",
-      ngaytai: "12/05/2021  16:46:12",
-      isChecked: false,
+      tieude: "Top ca khúc 2021",
+      sobg: "20",
+      thoiluong: "01:04:27",
+      pop: "Pop",
+      chill: "Chill",
+      dingga: "Digga",
+      songs: "Songs",
+      lofi: "Lofi",
+      bacham: "",
+      ngaytao: "22/10/2020",
+      nguoitao: "Cindy Cường",
     },
     {
       id: 3,
-      tenbg: "Gorgeous Wooden Bike",
-      theloai: "Ballad",
-      dinhdang: "Audio",
-      thoiluong: "3:12",
-      casi: "Phan Mạnh Quỳnh",
-      tacgia: "Phan Mạnh Quỳnh",
-      maisrc: "KRA40105463",
-      sohopdong: "HD395738503",
-      ngaytai: "12/05/2021  16:46:12",
-      isChecked: false,
+      tieude: "Top ca khúc 2021",
+      sobg: "20",
+      thoiluong: "01:04:27",
+      pop: "Pop",
+      chill: "Chill",
+      dingga: "Digga",
+      songs: "Songs",
+      lofi: "Lofi",
+      bacham: "",
+      ngaytao: "22/10/2020",
+      nguoitao: "Cindy Cường",
     },
     {
       id: 4,
-      tenbg: "Gorgeous Wooden Bike",
-      theloai: "Ballad",
-      dinhdang: "Audio",
-      thoiluong: "3:12",
-      casi: "Phan Mạnh Quỳnh",
-      tacgia: "Phan Mạnh Quỳnh",
-      maisrc: "KRA40105463",
-      sohopdong: "HD395738503",
-      ngaytai: "12/05/2021  16:46:12",
-      isChecked: false,
+      tieude: "Top ca khúc 2021",
+      sobg: "20",
+      thoiluong: "01:04:27",
+      pop: "Pop",
+      chill: "Chill",
+      dingga: "Digga",
+      songs: "Songs",
+      lofi: "Lofi",
+      bacham: "",
+      ngaytao: "22/10/2020",
+      nguoitao: "Cindy Cường",
     },
     {
       id: 5,
-      tenbg: "Gorgeous Wooden Bike",
-      theloai: "Ballad",
-      dinhdang: "Audio",
-      thoiluong: "3:12",
-      casi: "Phan Mạnh Quỳnh",
-      tacgia: "Phan Mạnh Quỳnh",
-      maisrc: "KRA40105463",
-      sohopdong: "HD395738503",
-      ngaytai: "12/05/2021  16:46:12",
-      isChecked: false,
+      tieude: "Top ca khúc 2021",
+      sobg: "20",
+      thoiluong: "01:04:27",
+      pop: "Pop",
+      chill: "Chill",
+      dingga: "Digga",
+      songs: "Songs",
+      lofi: "Lofi",
+      bacham: "",
+      ngaytao: "22/10/2020",
+      nguoitao: "Cindy Cường",
     },
     {
       id: 6,
-      tenbg: "Gorgeous Wooden Bike",
-      theloai: "Ballad",
-      dinhdang: "Audio",
-      thoiluong: "3:12",
-      casi: "Phan Mạnh Quỳnh",
-      tacgia: "Phan Mạnh Quỳnh",
-      maisrc: "KRA40105463",
-      sohopdong: "HD395738503",
-      ngaytai: "12/05/2021  16:46:12",
-      isChecked: false,
+      tieude: "Top ca khúc 2021",
+      sobg: "20",
+      thoiluong: "01:04:27",
+      pop: "Pop",
+      chill: "Chill",
+      dingga: "Digga",
+      songs: "Songs",
+      lofi: "Lofi",
+      bacham: "",
+      ngaytao: "22/10/2020",
+      nguoitao: "Cindy Cường",
     },
     {
       id: 7,
-      tenbg: "Gorgeous Wooden Bike",
-      theloai: "Ballad",
-      dinhdang: "Audio",
-      thoiluong: "3:12",
-      casi: "Phan Mạnh Quỳnh",
-      tacgia: "Phan Mạnh Quỳnh",
-      maisrc: "KRA40105463",
-      sohopdong: "HD395738503",
-      ngaytai: "12/05/2021  16:46:12",
-      isChecked: false,
+      tieude: "Top ca khúc 2021",
+      sobg: "20",
+      thoiluong: "01:04:27",
+      pop: "Pop",
+      chill: "Chill",
+      dingga: "Digga",
+      songs: "Songs",
+      lofi: "Lofi",
+      bacham: "",
+      ngaytao: "22/10/2020",
+      nguoitao: "Cindy Cường",
     },
     {
       id: 8,
-      tenbg: "Gorgeous Wooden Bike",
-      theloai: "Ballad",
-      dinhdang: "Audio",
-      thoiluong: "3:12",
-      casi: "Phan Mạnh Quỳnh",
-      tacgia: "Phan Mạnh Quỳnh",
-      maisrc: "KRA40105463",
-      sohopdong: "HD395738503",
-      ngaytai: "12/05/2021  16:46:12",
-      isChecked: false,
+      tieude: "Top ca khúc 2021",
+      sobg: "20",
+      thoiluong: "01:04:27",
+      pop: "Pop",
+      chill: "Chill",
+      dingga: "Digga",
+      songs: "Songs",
+      lofi: "Lofi",
+      bacham: "",
+      ngaytao: "22/10/2020",
+      nguoitao: "Cindy Cường",
     },
     {
       id: 9,
-      tenbg: "Gorgeous Wooden Bike",
-      theloai: "Ballad",
-      dinhdang: "Audio",
-      thoiluong: "3:12",
-      casi: "Phan Mạnh Quỳnh",
-      tacgia: "Phan Mạnh Quỳnh",
-      maisrc: "KRA40105463",
-      sohopdong: "HD395738503",
-      ngaytai: "12/05/2021  16:46:12",
-      isChecked: false,
+      tieude: "Top ca khúc 2021",
+      sobg: "20",
+      thoiluong: "01:04:27",
+      pop: "Pop",
+      chill: "Chill",
+      dingga: "Digga",
+      songs: "Songs",
+      lofi: "Lofi",
+      bacham: "",
+      ngaytao: "22/10/2020",
+      nguoitao: "Cindy Cường",
     },
     {
       id: 10,
-      tenbg: "Gorgeous Wooden Bike",
-      theloai: "Ballad",
-      dinhdang: "Audio",
-      thoiluong: "3:12",
-      casi: "Phan Mạnh Quỳnh",
-      tacgia: "Phan Mạnh Quỳnh",
-      maisrc: "KRA40105463",
-      sohopdong: "HD395738503",
-      ngaytai: "12/05/2021  16:46:12",
-      isChecked: false,
+      tieude: "Top ca khúc 2021",
+      sobg: "20",
+      thoiluong: "01:04:27",
+      pop: "Pop",
+      chill: "Chill",
+      dingga: "Digga",
+      songs: "Songs",
+      lofi: "Lofi",
+      bacham: "",
+      ngaytao: "22/10/2020",
+      nguoitao: "Cindy Cường",
     },
     {
       id: 11,
-      tenbg: "Gorgeous Wooden Bike",
-      theloai: "Ballad",
-      dinhdang: "Audio",
-      thoiluong: "3:12",
-      casi: "Phan Mạnh Quỳnh",
-      tacgia: "Phan Mạnh Quỳnh",
-      maisrc: "KRA40105463",
-      sohopdong: "HD395738503",
-      ngaytai: "12/05/2021  16:46:12",
-      isChecked: false,
+      tieude: "Top ca khúc 2021",
+      sobg: "20",
+      thoiluong: "01:04:27",
+      pop: "Pop",
+      chill: "Chill",
+      dingga: "Digga",
+      songs: "Songs",
+      lofi: "Lofi",
+      bacham: "",
+      ngaytao: "22/10/2020",
+      nguoitao: "Cindy Cường",
     },
     {
       id: 12,
-      tenbg: "Gorgeous Wooden Bike",
-      theloai: "Ballad",
-      dinhdang: "Audio",
-      thoiluong: "3:12",
-      casi: "Phan Mạnh Quỳnh",
-      tacgia: "Phan Mạnh Quỳnh",
-      maisrc: "KRA40105463",
-      sohopdong: "HD395738503",
-      ngaytai: "12/05/2021  16:46:12",
-      isChecked: false,
+      tieude: "Top ca khúc 2021",
+      sobg: "20",
+      thoiluong: "01:04:27",
+      pop: "Pop",
+      chill: "Chill",
+      dingga: "Digga",
+      songs: "Songs",
+      lofi: "Lofi",
+      bacham: "",
+      ngaytao: "22/10/2020",
+      nguoitao: "Cindy Cường",
+    },
+    {
+      id: 13,
+      tieude: "Top ca khúc 2021",
+      sobg: "20",
+      thoiluong: "01:04:27",
+      pop: "Pop",
+      chill: "Chill",
+      dingga: "Digga",
+      songs: "Songs",
+      lofi: "Lofi",
+      bacham: "",
+      ngaytao: "22/10/2020",
+      nguoitao: "Cindy Cường",
     },
   ]);
 
@@ -204,60 +233,12 @@ const DSPlayList: React.FC = () => {
             <img src="images/search.png" alt="" />
           </a>
         </form>
-        {/* danh sach dropdown */}
-        <div
-          className="textt4"
-          style={{
-            width: "68px",
-            top: "238px",
-            left: "229px",
-          }}
-        >
-          Thể loại:
-        </div>
-        <select
-          className="select4"
-          style={{
-            width: "131px",
-            top: "230px",
-            left: "313px",
-          }}
-        >
-          <option value="all">Tất cả</option>
-          <option value="performer">Pop</option>
-          <option value="manufacturer">EDM</option>
-          <option value="manufacturer">Ballad</option>
-        </select>
-        <div
-          className="textt4"
-          style={{
-            width: "91px",
-            top: "238px",
-            left: "508px",
-          }}
-        >
-          Định dạng:
-        </div>
-        <select
-          className="select4"
-          style={{
-            width: "131px",
-            top: "230px",
-            left: "615px",
-          }}
-        >
-          <option value="all">Tất cả</option>
-          <option value="performer">Âm thanh</option>
-          <option value="manufacturer">Video</option>
-        </select>
-
-        {/* danh sach dropdown */}
 
         {/* icon menu */}
         <div
           className="textt4"
           style={{
-            top: "238px",
+            top: "174px",
             left: "1690px",
           }}
         >
@@ -269,7 +250,7 @@ const DSPlayList: React.FC = () => {
         <div
           className="textt4"
           style={{
-            top: "238px",
+            top: "174px",
             left: "1738px",
           }}
         >
@@ -279,21 +260,13 @@ const DSPlayList: React.FC = () => {
         </div>
         {/* icon menu */}
 
-        <div className="khungt" style={{ height: 224 }}>
+        <div className="khungt">
           <div className="khugne">
             <a href="/suatt" style={{ textDecoration: "none" }}>
-              <img src="images/ok.png" alt="sua" className="icon1" />
-              <div className="texttt">Phê duyệt</div>
-            </a>
-          </div>
-          <div className="khugne">
-            <a
-              data-bs-toggle="modal"
-              data-bs-target="#exampleModal"
-              style={{ textDecoration: "none" }}
-            >
-              <img src="images/no.png" alt="sua" className="icon1" />
-              <div className="texttt">Từ chối</div>
+              <img src="images/congfile.png" alt="sua" className="icon1" />
+              <div className="texttt">
+                Thêm <br /> Playlist
+              </div>
             </a>
           </div>
         </div>
@@ -302,7 +275,7 @@ const DSPlayList: React.FC = () => {
             width: 1541,
             height: "fit-content",
             position: "absolute",
-            top: 294,
+            top: 230,
             left: 229,
             padding: "16px 24px",
             borderRadius: 16,
@@ -319,25 +292,14 @@ const DSPlayList: React.FC = () => {
           >
             <thead>
               <tr style={{ textAlign: "left", height: 48, color: "#FFAC69" }}>
-                <th style={{ width: "51px" }}>
-                  <input
-                    type="checkbox"
-                    onChange={handleCheckAll}
-                    style={{
-                      width: "24px",
-                      height: "24px",
-                      border: "1px solid #347AFF",
-                    }}
-                  />
-                </th>
-                <th style={{ width: "94" }}>stt</th>
-                <th style={{ width: "292" }}>Tên bản ghi</th>
-                <th style={{ width: "200" }}>Ca sĩ</th>
-                <th style={{ width: "195" }}>Tác giả</th>
-                <th style={{ width: "183" }}>Mã ISRC</th>
-                <th style={{ width: "185" }}>Số hợp đồng</th>
-                <th style={{ width: "199" }}>Ngày tải</th>
-                <th style={{ width: "94" }}></th>
+                <th style={{ width: "70" }}>stt</th>
+                <th style={{ width: "314" }}>Tiêu đề</th>
+                <th style={{ width: "130" }}>Số bản ghi</th>
+                <th style={{ width: "136" }}>Thời lượng</th>
+                <th style={{ width: "420" }}>Chủ đề</th>
+                <th style={{ width: "180" }}>Ngày tạo</th>
+                <th style={{ width: "148" }}>Người tạo</th>
+                <th style={{ width: "95" }}></th>
               </tr>
             </thead>
             <tbody>
@@ -347,63 +309,29 @@ const DSPlayList: React.FC = () => {
                     color: "#FFFFFF",
                     marginBottom: "1px",
                     borderBottom: "1px solid #727288",
+                    height: 47,
                   }}
                 >
-                  <td>
-                    <input
-                      type="checkbox"
-                      checked={danhsach.isChecked}
-                      onChange={() => handleCheckSingle(danhsach.id)}
-                      style={{
-                        width: "24px",
-                        height: "24px",
-                        border: "1px solid #347AFF",
-                      }}
-                    />
-                  </td>
                   <td>{danhsach.id}</td>
                   <td>
-                    {danhsach.tenbg} <br />
-                    <span
-                      style={{
-                        opacity: "70%",
-                      }}
-                    >
-                      {danhsach.theloai}
-                      <div
-                        style={{
-                          width: 4,
-                          height: 4,
-                          backgroundColor: "#347AFF",
-                          borderRadius: "50%",
-                          display: "inline-block",
-                          margin: "3px 3px 3px 3px",
-                        }}
-                      ></div>
-                      {danhsach.dinhdang}
-                      <div
-                        style={{
-                          width: 4,
-                          height: 4,
-                          backgroundColor: "#347AFF",
-                          borderRadius: "50%",
-                          display: "inline-block",
-                          margin: "3px 3px 3px 3px",
-                        }}
-                      ></div>
-                      {danhsach.thoiluong}
-                    </span>
+                    {danhsach.tieude} <br />
                   </td>
 
-                  <td>{danhsach.casi}</td>
-                  <td>{danhsach.tacgia}</td>
-                  <td>{danhsach.maisrc}</td>
-
-                  <td>{danhsach.sohopdong}</td>
-                  <td>12/05/2021 16:46:12</td>
+                  <td>{danhsach.sobg}</td>
+                  <td>{danhsach.thoiluong}</td>
+                  <td style={{ display: "flex" }}>
+                    <div className="khung5">{danhsach.pop}</div>
+                    <div className="khung5">{danhsach.chill}</div>
+                    <div className="khung5">{danhsach.dingga}</div>
+                    <div className="khung5">{danhsach.songs}</div>
+                    <div className="khung5">{danhsach.lofi}</div>
+                    <div className="khung5">{danhsach.bacham}</div>
+                  </td>
+                  <td>{danhsach.ngaytao}</td>
+                  <td>{danhsach.nguoitao}</td>
                   <td>
                     <a href="" style={{ color: "#FF7506" }}>
-                      Nghe
+                      Chi tiết
                     </a>
                   </td>
                 </tr>
@@ -451,7 +379,7 @@ const DSPlayList: React.FC = () => {
                     alignItems: "center",
                   }}
                 >
-                  12
+                  13
                 </div>
               </div>
               hàng trong mỗi trang
@@ -492,105 +420,6 @@ const DSPlayList: React.FC = () => {
           </div>
         </div>
         {/* showModal */}
-        <div
-          className="modal fade"
-          id="exampleModal"
-          tabIndex={-1}
-          aria-labelledby="exampleModalLabel"
-          aria-hidden="true"
-        >
-          <div
-            className="modal-dialog"
-            style={{
-              // display: "flex",
-              width: "720px",
-              height: "432px",
-            }}
-          >
-            <div
-              className="modal-content"
-              style={{
-                backgroundColor: "#3E3E5B",
-                width: "720px",
-                height: "432px",
-                borderRadius: "16px",
-              }}
-            >
-              <div className="modal-body">
-                <h5
-                  className="modal-title m-0"
-                  id="exampleModalLabel"
-                  style={{
-                    width: "100%",
-                    height: "24px",
-                    top: "32px",
-                    left: "159px",
-                    fontFamily: "Montserrat",
-                    fontSize: "24px",
-                    fontWeight: 700,
-                    lineHeight: "24px",
-                    letterSpacing: "-0.002em",
-                    textAlign: "center",
-                    color: "#F5F5FF",
-                  }}
-                >
-                  Lý do từ chối phê duyệt
-                </h5>
-
-                <textarea
-                  placeholder="Cho chúng tôi biết lý do bạn muốn từ chối phê duyệt bản ghi này..."
-                  style={{
-                    position: "absolute",
-                    top: "96px",
-                    left: "40px",
-                    width: "640px",
-                    height: "208px",
-                    padding: "12px 24px 12px 16px",
-                    borderRadius: "8px",
-                    border: " 1px solid #727288",
-                    backgroundColor: "#2B2B3F",
-                    color: "white",
-                  }}
-                />
-
-                <div>
-                  <div
-                    style={{
-                      width: "368px",
-                      height: "48px",
-                      top: "344px",
-                      left: "176px",
-                      gap: "32px",
-                      position: "absolute",
-                    }}
-                  >
-                    <button
-                      className="butoon"
-                      style={{
-                        color: "#FF7506",
-                        backgroundColor: "transparent",
-                      }}
-                      data-bs-dismiss="modal"
-                    >
-                      Hủy
-                    </button>
-                    <button
-                      className="butoon"
-                      style={{
-                        color: "white",
-                        background: "#FF7506",
-                        marginLeft: "32px",
-                      }}
-                      data-bs-dismiss="modal"
-                    >
-                      Từ chối
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </>
   );
