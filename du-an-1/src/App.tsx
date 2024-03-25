@@ -18,6 +18,9 @@ import ChiTietHopDong from "./hopdonguyquyen/ChiTietHopDong";
 import CTBanGhi from "./QLKhoBanGhi/ctbanghi";
 import DSPlayList from "./QLplaylist/Dsplaylist";
 import DSPlayList1 from "./QLplaylist/Dsplaylist1";
+import PlayListTop from "./QLplaylist/playlistTop";
+import SuaPlayList from "./QLplaylist/suaPlaylist";
+import ThemPlayList from "./QLplaylist/themPlaylist";
 
 function App() {
   return (
@@ -69,6 +72,9 @@ function App() {
             <Routes>
               <Route path="/dsplaylist" element={<DSPlayList />} />
               <Route path="/dsplaylist1" element={<DSPlayList1 />} />
+              <Route path="/playlisttop" element={<PlayListTop />} />
+              <Route path="/suaplaylist" element={<SuaPlayList />} />
+              <Route path="/themplaylist" element={<ThemPlayList />} />
             </Routes>
           </BrowserRouter>
         </div>

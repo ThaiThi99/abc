@@ -91,7 +91,7 @@ const DSPlayList1: React.FC = () => {
             left: "1690px",
           }}
         >
-          <a href="/pheduyetbg1">
+          <a href="/dsplaylist">
             <img src="images/List.png" className="icon4" alt="" />
           </a>
         </div>
@@ -103,7 +103,7 @@ const DSPlayList1: React.FC = () => {
             left: "1738px",
           }}
         >
-          <a href="/pheduyetbg">
+          <a href="/dsplaylist1">
             <img src="images/tab.png" className="icon4" alt="" />
           </a>
         </div>

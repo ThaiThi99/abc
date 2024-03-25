@@ -4,3 +4,20 @@
   padding: 5px;
   margin-right: 5px;
 }
+.text6 {
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.002em;
+  text-align: right;
+  color: #ffffff;
+  display: flex;
+}
+.chamxanh6 {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #347aff;
+  margin-right: 5px;
+}
