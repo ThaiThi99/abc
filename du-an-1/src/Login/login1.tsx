@@ -2,12 +2,58 @@ import React, { useState } from "react";
 import HeaderLogin from "../BackGround/headerLogin";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import firebase from "firebase/compat/app";
+import { getAuth } from "firebase/auth";
+import { createBrowserHistory } from "history";
+
+import { signInWithEmailAndPassword } from "firebase/auth";
+
+// Configure Firebase.
+const config = {
+  apiKey: "AIzaSyB6jrfajGLlrI6IO_9TPsO2KEbpJNGXmv0",
+  authDomain: "thaidoanthi-99.firebaseapp.com",
+};
+firebase.initializeApp(config);
 
 const LoginForm: React.FC = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   // const [language, setLanguage] = useState("en");
+  const [errorMessage, setErrorMessage] = useState("");
+  const history = createBrowserHistory();
+
+  const dangnhap = async (event: any) => {
+    setErrorMessage("");
+    event.preventDefault(); // Ngăn chặn hành vi mặc định của form
+    const emailInput = document.getElementById("email") as HTMLInputElement;
+    const passwordInput = document.getElementById(
+      "password"
+    ) as HTMLInputElement;
+    const email = emailInput.value;
+    const password = passwordInput.value;
+    const auth = getAuth();
+
+    await signInWithEmailAndPassword(auth, email, password)
+      .then(async (userCredential) => {
+        // Signed in
+        const user = await userCredential.user;
+
+        console.log("thành công", user.providerData[0].email);
+        // history.push("/navbar", { user: user }); // Chuyển hướng và truyền thông tin user
+        // navigate("/navbar", { state: { user: user } });
+
+        await history.push("/trang1", {
+          user: user.providerData[0].email,
+        });
+        window.location.reload();
+      })
+      .catch((error) => {
+        // const errorCode = error.code;
+        setErrorMessage("Sai tên tài khoản hoặc mật khẩu.");
+        console.log("thất bại");
+      });
+  };
 
   const handleLogin = () => {
     // Xử lý logic đăng nhập tại đây
@@ -38,7 +84,7 @@ const LoginForm: React.FC = () => {
                 left: "840px",
                 marginTop: "116px",
               }}
-              src="images/logo.png"
+              src="https://firebasestorage.googleapis.com/v0/b/thaidoanthi-99.appspot.com/o/images%2Flogo.png?alt=media&token=5b735b4d-5635-4638-9529-7aa360c006fe"
               alt=""
             />
 
@@ -89,7 +135,8 @@ const LoginForm: React.FC = () => {
               <input
                 className="bg-black"
                 type="text"
-                id="username"
+                name="username"
+                id="email"
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
                 style={{
@@ -134,6 +181,7 @@ const LoginForm: React.FC = () => {
                   className="bg-black"
                   type={showPassword ? "text" : "password"}
                   id="password"
+                  name="password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   style={{
@@ -165,6 +213,20 @@ const LoginForm: React.FC = () => {
                 />
                 {/* </div> */}
               </div>
+            </div>
+            <div
+              style={{
+                color: "#FF0000",
+                fontFamily: "Montserrat",
+                fontSize: 16,
+                fontWeight: 400,
+                marginLeft: 18,
+                letterSpacing: "-0.002em",
+                textAlign: "left",
+              }}
+              id="error-message"
+            >
+              {errorMessage}
             </div>
 
             <div
@@ -218,7 +280,6 @@ const LoginForm: React.FC = () => {
 
             <button
               className="mb-5"
-              onClick={handleLogin}
               style={{
                 width: "208px",
                 height: "56px",
@@ -237,6 +298,8 @@ const LoginForm: React.FC = () => {
                 color: "#FFFFFF",
                 marginTop: "48px",
               }}
+              type="submit"
+              onClick={(event) => dangnhap(event)}
             >
               Đăng nhập
             </button>
