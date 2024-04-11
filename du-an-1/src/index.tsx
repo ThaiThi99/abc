@@ -8,6 +8,7 @@ import "bootstrap/dist/js/bootstrap.bundle";
 import "@fortawesome/fontawesome-free/css/all.css";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fas } from "@fortawesome/free-solid-svg-icons";
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 library.add(fas);
 

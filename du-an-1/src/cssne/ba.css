@@ -34,6 +34,7 @@
   height: 130px;
   top: 222px;
   left: 1810px;
+  border-radius: 15px 0 0 15px;
   position: absolute;
   background: #72728880;
 }
@@ -42,6 +43,22 @@
   height: 130px;
   padding: 16px;
   text-align: center;
+}
+.icon1 {
+  margin: 16px 28px;
+}
+.textt {
+  width: 78px;
+  height: 36px;
+  opacity: 0.7;
+  font-family: "Montserrat";
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0.005em;
+  text-align: center;
+  color: #ffffff;
+  margin-left: 16px;
 }
 /* css phân trang */
 .mao3 {
@@ -74,4 +91,247 @@
   background-color: #f5f5ff;
   display: inline-block;
   margin-left: 4px;
+}
+.hdqbh3 {
+  width: 800px;
+  height: 48px;
+  top: 114px;
+  left: 78px;
+  position: absolute;
+  color: #ffffff;
+}
+.hdqbhh3 {
+  font-family: Montserrat;
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: -0.002em;
+  text-align: left;
+}
+.khd3 {
+  position: absolute;
+  top: 213px;
+  left: 80px;
+  width: 120px;
+  height: 24px;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: -0.002em;
+  text-align: left;
+  color: #ffffff;
+}
+.ip3 {
+  margin-bottom: 16px;
+  color: #f5f5ff;
+  width: 374px;
+  height: 48px;
+  padding: 11px 24px 13px 16px;
+  border-radius: 8px;
+  border: 1px solid #727288;
+  background: #2b2b3f;
+}
+.dkt3 {
+  position: absolute;
+  top: 213px;
+  left: 750px;
+  width: 119px;
+  height: 24px;
+  color: white;
+}
+.khungn33 {
+  position: absolute;
+  top: 205px;
+  left: 881px;
+  width: 208px;
+  height: 24px;
+  color: white;
+}
+/* css phaan them file */
+.inputfile3 {
+  width: 108px;
+  height: 40px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: 1px solid #ffac69;
+  gap: 4px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+}
+/* hinh anh file */
+.imgfile3 {
+  width: 108px;
+  height: 40px;
+  border: 1px solid #ffac69;
+  color: #ffac69;
+}
+.khungdoc {
+  width: 24px;
+  height: 24px;
+  margin-top: 5px;
+  margin-left: 11px;
+}
+.kngoai3 {
+  position: absolute;
+  color: white;
+  width: 273px;
+  height: 184px;
+  top: 186px;
+  left: 1355px;
+}
+.hrr3 {
+  border: 1px solid #727288;
+  width: 1799px;
+  position: absolute;
+  top: 538px;
+  left: 80px;
+  opacity: 0.5;
+  transform: rotate(-0deg);
+}
+.textttuq3 {
+  width: 290px;
+  height: 24px;
+  position: absolute;
+  top: 570px;
+  left: 80px;
+  font: bold 18px Montserrat;
+  line-height: 24px;
+  letter-spacing: -0.002em;
+  text-align: left;
+  color: #ffac69;
+}
+.sao3 {
+  color: #ff4747;
+  margin-top: 4px;
+  margin-left: 3px;
+  position: absolute;
+}
+.chuthich3 {
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0.005em;
+  text-align: left;
+  display: flex;
+}
+.khungttpnuy3 {
+  width: 325px;
+  position: absolute;
+  top: 630px;
+  left: 286px;
+  color: white;
+}
+.radio3 {
+  width: 99px;
+  height: 24px;
+  margin-right: 8px;
+  display: inline-block;
+}
+.nutbtn3 {
+  position: absolute;
+  top: 1045px;
+  left: 772px;
+  width: 376px;
+  height: 48px;
+  gap: 40px;
+}
+.boooton3 {
+  width: 168px;
+  height: 48px;
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: 1px solid #ff7506;
+  color: #ff7506;
+  background: transparent;
+  gap: 8px;
+}
+.tren3 {
+  width: fit-content;
+  height: fit-content;
+  position: absolute;
+  top: 186px;
+  margin-top: 10px;
+  left: 78px;
+  border-radius: 24px;
+  border: 1px solid #b65100;
+  display: flex;
+}
+.trenn3 {
+  width: 211px;
+  height: 40px;
+  border-radius: 24px;
+  gap: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tthd3 {
+  color: white;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.002em;
+  text-align: center;
+  margin-top: 13px;
+}
+.ttpd3 {
+  width: 174px;
+  height: 24px;
+  position: absolute;
+  top: 266px;
+  left: 78px;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: -0.002em;
+  text-align: left;
+  color: #ffffff;
+}
+.sl3 {
+  width: 160px;
+  height: 40px;
+  position: absolute;
+  top: 258px;
+  left: 268px;
+  padding: 8px 12px 8px 16px;
+  border-radius: 8px;
+  border: 1px solid #ff7506;
+  justify-content: space-between;
+  background: #1e1e2e;
+  color: #ffffff;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: -0.002em;
+}
+.khungtc3 {
+  width: 501px;
+  height: 48px;
+  position: absolute;
+  top: 250px;
+  left: 1269px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #2b2b3f;
+}
+.ipp3 {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.002em;
+  outline: none;
+  padding-left: 24px;
+  padding-right: 67px;
 }

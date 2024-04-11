@@ -36,12 +36,9 @@ const LoginForm: React.FC = () => {
 
     await signInWithEmailAndPassword(auth, email, password)
       .then(async (userCredential) => {
-        // Signed in
         const user = await userCredential.user;
 
         console.log("thành công", user.providerData[0].email);
-        // history.push("/navbar", { user: user }); // Chuyển hướng và truyền thông tin user
-        // navigate("/navbar", { state: { user: user } });
 
         await history.push("/trang1", {
           user: user.providerData[0].email,
@@ -49,15 +46,12 @@ const LoginForm: React.FC = () => {
         window.location.reload();
       })
       .catch((error) => {
-        // const errorCode = error.code;
         setErrorMessage("Sai tên tài khoản hoặc mật khẩu.");
         console.log("thất bại");
       });
   };
 
-  const handleLogin = () => {
-    // Xử lý logic đăng nhập tại đây
-  };
+  const handleLogin = () => {};
 
   const toggleShowPassword = () => {
     setShowPassword(!showPassword);

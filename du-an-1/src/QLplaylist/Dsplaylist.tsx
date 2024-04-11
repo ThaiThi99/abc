@@ -220,7 +220,9 @@ const DSPlayList: React.FC = () => {
     <>
       <div className="thedau">
         <Navbar />
-        <div className="ttcb4">Kho bản ghi</div>
+        <div className="ttcb4" style={{ left: 229 }}>
+          Playlist
+        </div>
         <form onSubmit={handleFormSubmit} className="timkiem4">
           <input
             type="text"

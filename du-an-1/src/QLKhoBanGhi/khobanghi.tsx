@@ -236,7 +236,6 @@ const KhoBanGhi: React.FC = () => {
                 <td>Phan Mạnh Quỳnh</td>
                 <td>Phan Mạnh Quỳnh</td>
                 <td>Ballad</td>
-                <td>Audio</td>
                 <td>
                   Còn thời hạn <br />
                   02/10/2019
@@ -265,7 +264,6 @@ const KhoBanGhi: React.FC = () => {
                 <td>04:27</td>
                 <td>Phan Mạnh Quỳnh</td>
                 <td>Phan Mạnh Quỳnh</td>
-                <td>Ballad</td>
                 <td>Audio</td>
                 <td>
                   Còn thời hạn <br />

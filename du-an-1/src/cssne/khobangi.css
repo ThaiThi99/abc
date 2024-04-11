@@ -4,6 +4,7 @@
   top: 222px;
   left: 1810px;
   position: absolute;
+  border-radius: 15px 0 0 15px;
   background: #72728880;
 }
 .khungne {
@@ -38,6 +39,7 @@
 .icon1 {
   margin: 16px 28px;
 }
+
 .texttt {
   width: 78px;
   height: 36px;
@@ -341,3 +343,59 @@
 }
 
 /* chi tiết bản ghi */
+.dropdown3 {
+  display: inline-block;
+  width: 274px;
+  height: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.dropdown3 .anchor {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+.dropdown3 .anchor:after {
+  position: absolute;
+  content: "";
+  border-left: 2px solid white;
+  border-top: 2px solid white;
+  padding: 5px;
+  right: 10px;
+  top: 20%;
+  transform: rotate(-135deg);
+}
+
+.dropdown3 .anchor:active:after {
+  right: 8px;
+  top: 21%;
+}
+
+.dropdown3 ul.the3 {
+  padding: 2px;
+  display: none;
+  margin: 0;
+  background: #3e3e5b;
+  border-top: none;
+}
+
+.dropdown3 ul.the3 li {
+  list-style: none;
+}
+
+.dropdown3.visible .anchor {
+  color: white;
+}
+
+li {
+  background: #3e3e5b;
+  padding-left: 8px;
+}
+
+.dropdown3.visible .the3 {
+  display: block;
+}
